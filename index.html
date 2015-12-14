@@ -8,16 +8,43 @@ layout: default
 
   <ul class="post-list">
     {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+    <li>
+      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
+      <h2>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </h2>
+    </li>
     {% endfor %}
   </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+  <p>
+    For a long period of time, querying Linked Data has been a story of two extremes, with Linked Data documents on the one side and the SPARQL protocol on the other. Currently, neither of them is able to drive real-world applications on the Web. On the one
+    hand, public SPARQL endpoints are limited in number and suffer from frequent downtime. Their resource consumption, caused by the expressiveness of the language and individual user demand, is hard to predict. This downtime results in insufficient reliability
+    for client applications. Linked Data documents, on the other hand, are both larger in number and are more predictable. However, link-traversalbased query methods are signi1cantly slower and result sets are inherently incomplete as disconnected graph
+    components cannot be traversed. These are both undesired traits for user applications. The issues with these two query solutions hint at a need for other client/server trade-offs.
+  </p>
+  <p>
+    Linked Data Fragments (LDF) is a conceptual framework that provides a uniform view on all possible interfaces to RDF, by observing that each interface partitions a dataset into its own speci1c kind of fragments. Since its 1rst publication in 2014, it
+    has gained traction throughout the Semantic Web and Linked Data community. Several popular datasets, such as DBPedia and Wikidata are already available through alternative, LDF-based APIs. The fact that LDF is able to ful1ll the earlier formulated
+    demand for more versatile client/server trade-off is shown by the fact that researchers from multiple research groups are already using LDF in their research. To facilitate this promising trend in Linked Data publishing and querying, this tutorial
+    introduces more people to the aforementioned space of trade-offs. First, we want to educate people who want to start using LDF, but do not know where to start. Second, we want to establish LDF as a general concept, vision and approach to expand its
+    community, rather than being perceived as a single method by speci1c authors. Therefore, the objectives of this tutorial are three-fold:
+  </p>
+  <ol>
+    <li>learn about the LDF framework and how it can be used to describe Linked Data interfaces</li>
+    <li>learn about alternative interfaces like Triple Pattern Fragments</li>
+    <li>learn how to develop client applications on top of different LDF interfaces</li>
+  </ol>
+  <h2>Covered material</h2>
+  <p>
+    In this tutorial, we will cover the following materials:
+  </p>
+  <ul>
+    <li><strong>Linked Data Fragments:</strong> What interfaces exist? What are current interaction patterns? What are the key components of LDF? How can you use it to view an interface?</li>
+    <li><strong>Triple Pattern Fragments:</strong> What is it? How do the client/server work? What are the trade-offs involved?</li>
+    <li><strong>Self-descriptive APIs:</strong> How can you describe your interface to a client? What is Hydra? How does a client discover API features?</li>
+    <li><strong>Exploring the LDF axis:</strong> How to extend existing interfaces? How to design new trade-offs?</li>
+    <li><strong>Application development:</strong> How to create requests to the TPF interface? How to use existing libraries? </li>
+    <li><strong>Data publishing:</strong> How to publish your own LDF endpoint in order to make your Linked Dataset available for other to query. How to expose an existing query endpoint using LDF?</li>
+  </ul>
 </div>
