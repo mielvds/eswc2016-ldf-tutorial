@@ -1,9 +1,10 @@
 # Site settings
-title: ESWC2016 Linked Data Fragments Tutorial
-email: tutorial@linkeddatafragments.org
+title: ESWC2016 Tutorial
+email: miel.vandersande@ugent.be
 description: > # this means to ignore newlines until "baseurl:"
   This webpage offers you the LDF tutorial
 baseurl: "" # the subpath of your site, e.g. /blog/
+site: "http://linkeddatafragments.org/"
 logo: "logo.svg"
 url: "http://tutorial.linkeddatafragments.org" # the base hostname & protocol for your site
 twitter_username: LDFragments
